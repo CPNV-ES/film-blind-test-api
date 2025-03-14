@@ -64,6 +64,7 @@ exports.login = async (req, res) => {
 
         res.json({
             message: 'Login successful',
+            username: user.username,
             accessToken,
             refreshToken
         });
