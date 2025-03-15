@@ -34,9 +34,12 @@ exports.register = async (req, res) => {
         refreshTokens.add(refreshToken);
 
         res.status(201).json({
-            message: 'User registered successfully',
-            accessToken,
-            refreshToken
+            token: accessToken,
+            user : {
+                id: user.id,
+                username : user.username,
+                email: user.email
+            }
         });
     } catch (error) {
         res.status(500).json({ message: 'Error registering user', error: error.message });
@@ -62,11 +65,13 @@ exports.login = async (req, res) => {
         const { accessToken, refreshToken } = generateTokens(user._id);
         refreshTokens.add(refreshToken);
 
-        res.json({
-            message: 'Login successful',
-            username: user.username,
-            accessToken,
-            refreshToken
+        res.status(201).json({
+            token: accessToken,
+            user : {
+                id: user.id,
+                username : user.username,
+                email: user.email
+            }
         });
     } catch (error) {
         res.status(500).json({ message: 'Error logging in', error: error.message });
@@ -99,8 +104,7 @@ exports.refresh = async (req, res) => {
         refreshTokens.add(newRefreshToken);
 
         res.json({
-            accessToken,
-            refreshToken: newRefreshToken
+            token : accessToken,
         });
     } catch (error) {
         res.status(403).json({ message: 'Invalid refresh token', error: error.message });
