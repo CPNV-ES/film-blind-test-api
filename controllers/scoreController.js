@@ -21,7 +21,12 @@ exports.getTopScores = async (req, res) => {
                 $project: {
                     username: '$user.username',
                     score: 1,
-                    createdAt: 1
+                    date: {
+                        $dateToString: {
+                            format: "%Y-%m-%d %H:%M:%S",
+                            date: "$createdAt"
+                        }
+                    }
                 }
             },
             {
