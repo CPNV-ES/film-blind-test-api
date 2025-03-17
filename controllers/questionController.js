@@ -15,7 +15,7 @@ exports.getRandomQuestion = async (req, res) => {
         // Return only video_id and possible answers (no correct answer info)
         const questionData = {
             id: question._id,
-            video_id: question.video_id,
+            videoId: question.video_id,
             answers: question.answers.map(answer => ({
                 id: answer.id,
                 text: answer.text
