@@ -2,27 +2,28 @@ const mongoose = require('mongoose');
 const Question = require('../models/Question');
 require('dotenv').config();
 
+
 const sampleQuestions = [
     {
         video_id: "lYGald0tFro",
         answers: [
             {
                 id: "1",
-                text: "The Shawshank Redemption",
-                tmdb_id: "278",
-                is_correct: true
-            },
-            {
-                id: "2",
                 text: "The Green Mile",
                 tmdb_id: "497",
                 is_correct: false
             },
             {
-                id: "3",
+                id: "2",
                 text: "The Conversation",
                 tmdb_id: "592",
                 is_correct: false
+            },
+            {
+                id: "3",
+                text: "The Shawshank Redemption",
+                tmdb_id: "278",
+                is_correct: true
             },
             {
                 id: "4",
@@ -37,15 +38,15 @@ const sampleQuestions = [
         answers: [
             {
                 id: "1",
-                text: "The Dark Knight",
-                tmdb_id: "155",
-                is_correct: true
-            },
-            {
-                id: "2",
                 text: "Batman Begins",
                 tmdb_id: "272",
                 is_correct: false
+            },
+            {
+                id: "2",
+                text: "The Dark Knight",
+                tmdb_id: "155",
+                is_correct: true
             },
             {
                 id: "3",
@@ -66,27 +67,27 @@ const sampleQuestions = [
         answers: [
             {
                 id: "1",
-                text: "Inception",
-                tmdb_id: "27205",
-                is_correct: true
-            },
-            {
-                id: "2",
                 text: "The Matrix",
                 tmdb_id: "603",
                 is_correct: false
             },
             {
-                id: "3",
+                id: "2",
                 text: "Interstellar",
                 tmdb_id: "157336",
                 is_correct: false
             },
             {
-                id: "4",
+                id: "3",
                 text: "Tenet",
                 tmdb_id: "577922",
                 is_correct: false
+            },
+            {
+                id: "4",
+                text: "Inception",
+                tmdb_id: "27205",
+                is_correct: true
             }
         ]
     },
@@ -124,21 +125,21 @@ const sampleQuestions = [
         answers: [
             {
                 id: "1",
-                text: "The Lord of the Rings: The Fellowship of the Ring",
-                tmdb_id: "120",
-                is_correct: true
-            },
-            {
-                id: "2",
                 text: "The Hobbit: An Unexpected Journey",
                 tmdb_id: "49051",
                 is_correct: false
             },
             {
-                id: "3",
-                text: "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+                id: "2",
+                text: "The Chronicles of Narnia",
                 tmdb_id: "411",
                 is_correct: false
+            },
+            {
+                id: "3",
+                text: "The Lord of the Rings: The Fellowship of the Ring",
+                tmdb_id: "120",
+                is_correct: true
             },
             {
                 id: "4",
@@ -153,15 +154,15 @@ const sampleQuestions = [
         answers: [
             {
                 id: "1",
-                text: "Fight Club",
-                tmdb_id: "550",
-                is_correct: true
-            },
-            {
-                id: "2",
                 text: "American Psycho",
                 tmdb_id: "1359",
                 is_correct: false
+            },
+            {
+                id: "2",
+                text: "Fight Club",
+                tmdb_id: "550",
+                is_correct: true
             },
             {
                 id: "3",
@@ -182,27 +183,27 @@ const sampleQuestions = [
         answers: [
             {
                 id: "1",
-                text: "Jurassic Park",
-                tmdb_id: "329",
-                is_correct: true
-            },
-            {
-                id: "2",
                 text: "Godzilla",
                 tmdb_id: "124905",
                 is_correct: false
             },
             {
-                id: "3",
+                id: "2",
                 text: "King Kong",
                 tmdb_id: "254",
                 is_correct: false
             },
             {
-                id: "4",
+                id: "3",
                 text: "Pacific Rim",
                 tmdb_id: "68726",
                 is_correct: false
+            },
+            {
+                id: "4",
+                text: "Jurassic Park",
+                tmdb_id: "329",
+                is_correct: true
             }
         ]
     },
@@ -211,15 +212,15 @@ const sampleQuestions = [
         answers: [
             {
                 id: "1",
-                text: "The Godfather",
-                tmdb_id: "238",
-                is_correct: true
-            },
-            {
-                id: "2",
                 text: "Goodfellas",
                 tmdb_id: "769",
                 is_correct: false
+            },
+            {
+                id: "2",
+                text: "The Godfather",
+                tmdb_id: "238",
+                is_correct: true
             },
             {
                 id: "3",
@@ -240,21 +241,21 @@ const sampleQuestions = [
         answers: [
             {
                 id: "1",
-                text: "Forrest Gump",
-                tmdb_id: "13",
-                is_correct: true
-            },
-            {
-                id: "2",
                 text: "Big",
                 tmdb_id: "2280",
                 is_correct: false
             },
             {
-                id: "3",
+                id: "2",
                 text: "Cast Away",
                 tmdb_id: "8358",
                 is_correct: false
+            },
+            {
+                id: "3",
+                text: "Forrest Gump",
+                tmdb_id: "13",
+                is_correct: true
             },
             {
                 id: "4",
@@ -269,27 +270,27 @@ const sampleQuestions = [
         answers: [
             {
                 id: "1",
-                text: "The Matrix",
-                tmdb_id: "603",
-                is_correct: true
-            },
-            {
-                id: "2",
                 text: "Blade Runner",
                 tmdb_id: "78",
                 is_correct: false
             },
             {
-                id: "3",
+                id: "2",
                 text: "Total Recall",
                 tmdb_id: "861",
                 is_correct: false
             },
             {
-                id: "4",
+                id: "3",
                 text: "Ex Machina",
                 tmdb_id: "264660",
                 is_correct: false
+            },
+            {
+                id: "4",
+                text: "The Matrix",
+                tmdb_id: "603",
+                is_correct: true
             }
         ]
     },
@@ -298,14 +299,14 @@ const sampleQuestions = [
         answers: [
             {
                 id: "1",
-                text: "The Dark Knight Rises",
-                tmdb_id: "49026",
-                is_correct: true
+                text: "Batman Forever",
+                is_correct: false
             },
             {
                 id: "2",
-                text: "Batman Forever",
-                is_correct: false
+                text: "The Dark Knight Rises",
+                tmdb_id: "49026",
+                is_correct: true
             },
             {
                 id: "3",
@@ -330,17 +331,17 @@ const sampleQuestions = [
             },
             {
                 id: "2",
-                text: "Johnny Mnemonic",
-                is_correct: false
-            },
-            {
-                id: "3",
                 text: "Equilibrium",
                 is_correct: false
             },
             {
-                id: "4",
+                id: "3",
                 text: "Dark City",
+                is_correct: false
+            },
+            {
+                id: "4",
+                text: "Johnny Mnemonic",
                 is_correct: false
             }
         ]
@@ -350,24 +351,24 @@ const sampleQuestions = [
         answers: [
             {
                 id: "1",
-                text: "Kill Bill: Vol. 2",
-                tmdb_id: "393",
-                is_correct: true
-            },
-            {
-                id: "2",
                 text: "From Dusk Till Dawn",
                 is_correct: false
             },
             {
-                id: "3",
+                id: "2",
                 text: "Jackie Brown",
                 is_correct: false
             },
             {
-                id: "4",
+                id: "3",
                 text: "Death Proof",
                 is_correct: false
+            },
+            {
+                id: "4",
+                text: "Kill Bill: Vol. 2",
+                tmdb_id: "393",
+                is_correct: true
             }
         ]
     },
@@ -376,14 +377,14 @@ const sampleQuestions = [
         answers: [
             {
                 id: "1",
-                text: "The Lord of the Rings: The Two Towers",
-                tmdb_id: "121",
-                is_correct: true
+                text: "The Hobbit: The Desolation of Smaug",
+                is_correct: false
             },
             {
                 id: "2",
-                text: "The Hobbit: The Desolation of Smaug",
-                is_correct: false
+                text: "The Lord of the Rings: The Two Towers",
+                tmdb_id: "121",
+                is_correct: true
             },
             {
                 id: "3",
@@ -402,19 +403,19 @@ const sampleQuestions = [
         answers: [
             {
                 id: "1",
-                text: "The Godfather: Part II",
-                tmdb_id: "240",
-                is_correct: true
-            },
-            {
-                id: "2",
                 text: "The Departed",
                 is_correct: false
             },
             {
-                id: "3",
+                id: "2",
                 text: "Once Upon a Time in America",
                 is_correct: false
+            },
+            {
+                id: "3",
+                text: "The Godfather: Part II",
+                tmdb_id: "240",
+                is_correct: true
             },
             {
                 id: "4",
@@ -434,12 +435,12 @@ const sampleQuestions = [
             },
             {
                 id: "2",
-                text: "Jurassic Park III",
+                text: "The Lost World: Jurassic Park",
                 is_correct: false
             },
             {
                 id: "3",
-                text: "The Lost World: Jurassic Park",
+                text: "Jurassic Park III",
                 is_correct: false
             },
             {
@@ -454,14 +455,14 @@ const sampleQuestions = [
         answers: [
             {
                 id: "1",
-                text: "Saving Private Ryan",
-                tmdb_id: "857",
-                is_correct: true
+                text: "Cast Away",
+                is_correct: false
             },
             {
                 id: "2",
-                text: "Cast Away",
-                is_correct: false
+                text: "Saving Private Ryan",
+                tmdb_id: "857",
+                is_correct: true
             },
             {
                 id: "3",
@@ -480,19 +481,19 @@ const sampleQuestions = [
         answers: [
             {
                 id: "1",
-                text: "Memento",
-                tmdb_id: "77",
-                is_correct: true
-            },
-            {
-                id: "2",
                 text: "Insomnia",
                 is_correct: false
             },
             {
-                id: "3",
+                id: "2",
                 text: "Mulholland Drive",
                 is_correct: false
+            },
+            {
+                id: "3",
+                text: "Memento",
+                tmdb_id: "77",
+                is_correct: true
             },
             {
                 id: "4",
@@ -512,9 +513,9 @@ async function seed() {
         await Question.deleteMany({});
         console.log('Cleared existing questions');
 
-        // Insert sample questions
+        // Insert questions
         await Question.insertMany(sampleQuestions);
-        console.log('Inserted sample questions');
+        console.log('Inserted questions');
 
         console.log('Seed completed successfully');
         process.exit(0);
