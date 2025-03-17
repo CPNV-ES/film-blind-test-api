@@ -63,6 +63,8 @@ Before you begin, ensure you have the following installed:
 ### Authentication
 - `POST /auth/register` - Register a new user
 - `POST /auth/login` - Login and receive JWT token
+- `POST /auth/refresh` - Get new access token using refresh token
+- `POST /auth/logout` - Logout and invalidate refresh token
 
 ### Questions
 - `GET /question` - Get a random question
@@ -72,8 +74,11 @@ Before you begin, ensure you have the following installed:
 - `POST /scores/score` - Submit a score
 - `GET /scores` - Get leaderboard
 
-### User
-- `GET /user` - Get user information
+### User Management
+- `GET /user` - Get user profile information
+- `GET /user/scores` - Get user's game history
+- `PUT /user` - Update user profile
+- `DELETE /user` - Delete user account
 
 ## Testing with Postman 🧪
 
