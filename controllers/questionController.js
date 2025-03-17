@@ -48,10 +48,11 @@ exports.getQuestionAnswer = async (req, res) => {
         const movieDetails = await getMovieDetails(correctAnswer.tmdb_id);
 
         res.json({
-            correct_answer: {
+            answer: {
+                id: correctAnswer.id,
                 text: correctAnswer.text
             },
-            film: movieDetails
+            movieInfo: movieDetails
         });
     } catch (error) {
         console.error('Error fetching answer:', error);

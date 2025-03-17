@@ -7,6 +7,6 @@ const { authenticate } = require('../middleware/auth');
 router.use(authenticate);
 
 router.get('/', scoreController.getTopScores);
-router.post('/score', scoreController.addScore);
+router.post('/', scoreController.addScore);
 
 module.exports = router;

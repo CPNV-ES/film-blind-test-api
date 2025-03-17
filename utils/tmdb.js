@@ -61,9 +61,10 @@ exports.getMovieDetails = async (movieId) => {
         return {
             title: response.data.title,
             description: response.data.overview,
-            image_url: `${process.env.TMDB_IMAGE_URL}${response.data.poster_path}`,
+            poster: `${process.env.TMDB_IMAGE_URL}${response.data.poster_path}`,
             rating: response.data.vote_average,
-            director: response.data.credits.crew.find(person => person.job === 'Director')?.name || 'Unknown'
+            url: response.data.homepage,
+            year: response.data.release_date.split('-')[0]
         };
     } catch (error) {
         console.error(`Error fetching movie details for ${movieId}:`, error.message);

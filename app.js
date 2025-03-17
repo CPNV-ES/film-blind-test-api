@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/auth', authRoutes);
 app.use('/user', userRoutes);
 app.use('/question', questionRoutes);
-app.use('/scores', scoreRoutes);
+app.use('/score', scoreRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
